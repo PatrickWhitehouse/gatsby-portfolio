@@ -11,7 +11,7 @@ const Work = () => {
         my portfolio, so give me a shout if you're interested in working with
         me.
       </p>
-      <div className="flex justify-between my-5">
+      <div className="sm:flex sm:justify-between my-5">
         {workData.map(item => (
           <Card key={item.id} name={item.name} description={item.description} link={item.link}/>
         ))}

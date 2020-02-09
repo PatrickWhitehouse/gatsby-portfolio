@@ -1,7 +1,7 @@
 import React from "react"
 
 const Card = ({ name, description, link }) => (
-  <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800">
+  <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800 mb-3 sm:mb-0">
     <div className="px-6 py-4">
       <div className="font-bold text-xl mb-2">{name}</div>
       <p className="text-gray-500 text-base">{description}</p>
