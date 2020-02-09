@@ -4,7 +4,7 @@ import Navigation from "./navigation"
 import useSiteData from "./seo"
 import "../styles/global.css"
 const Layout = ({ children }) => {
-  const {title, description, author} = useSiteData();
+  const {title, description} = useSiteData();
   return(
     <>
     <Helmet>
