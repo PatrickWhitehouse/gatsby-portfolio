@@ -11,7 +11,7 @@ const Index = () => {
             maxWidth: 500
             
             ) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
       }
