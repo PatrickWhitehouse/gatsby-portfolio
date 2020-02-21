@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 const Navigation = () => (
-    <nav className="sm:max-w-screen-lg sm:m-auto">
+    <nav className="sm:max-w-screen-lg sm:m-auto" data-sal="slide-up">
         <ul className="flex justify-end p-5">
             <li className="mr-5">
                 <Link to="/" activeClassName="opacity-50 line-through">Home</Link>
