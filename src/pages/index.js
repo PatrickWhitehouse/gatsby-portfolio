@@ -37,6 +37,9 @@ const Index = () => {
         <h3 className="text-3xl">Where it all began...</h3>
         <p className="mt-3">Computers and anything tech related has always interested me. My dad, a Cisco engineer, has had a huge impact on my life choices so far. From an early age I watched him dismantle and reassemble computers, diagnose network issues and install 50 more WiFi access points in our home <span role="img" aria-label="laughing face">😆</span>!</p>
         <p className="mt-3">I currently work as a Front End Developer for an e-commerce agency in Manchester. Here I develop Magento 2 stores, which sometimes have the occasional WordPress integration.</p>
+        <p className="mt-3">
+          I'm always keeping up to date with the latest tech trends by following industry leaders on Twitter <a href="https://twitter.com/patrickdoesweb" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-300 underline font-medium">(here's my profile <span role="img" aria-label="wink face">😉</span>)</a>. I also scope the explore page on GitHub too, I often find some hidden gems here.
+        </p>
       </div>
     </Layout>
   )
