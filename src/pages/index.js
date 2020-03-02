@@ -1,5 +1,6 @@
 import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import Helmet from "react-helmet"
+import { useStaticQuery, graphql, withPrefix } from "gatsby"
 import Img from "gatsby-image"
 import Layout from "../components/layout"
 const Index = () => {
@@ -9,7 +10,7 @@ const Index = () => {
         childImageSharp {
           fluid(
             maxWidth: 500
-            
+
             ) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
@@ -19,6 +20,9 @@ const Index = () => {
   `)
   return (
     <Layout>
+      <Helmet>
+        <script src={withPrefix('tilt.js')} type="text/javascript" />
+      </Helmet>
       <div className="flex flex-col sm:flex-row">
         <div className="sm:w-1/2 sm:pr-5 order-2 sm:order-none">
           <h1 className="text-4xl mb-3">Hi, I'm Patrick Whitehouse <span role="img" aria-label="wave">👋🏼</span></h1>
@@ -26,7 +30,7 @@ const Index = () => {
             I'm a Manchester based Front End Web Developer who specialises in constructing niche, pixel perfect websites.
           </h2>
         </div>
-        <div className="sm:w-1/2 order-1 sm:order-none mb-3 sm:mb-0">
+        <div className="sm:w-1/2 order-1 sm:order-none mb-3 sm:mb-0" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
           <Img
             fluid={data.file.childImageSharp.fluid}
             alt="Patrick Whitehouse in front of lights"
