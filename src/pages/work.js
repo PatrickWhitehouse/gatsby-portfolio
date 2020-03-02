@@ -2,17 +2,24 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Card from "../components/card"
+
 const Work = () => {
   const queryCall = useStaticQuery(graphql`
   query {
-     allWorkJson {
+    allWorkJson {
     edges {
       node {
         id
-        image
         name
         description
         link
+        image {
+          childImageSharp {
+            fluid {
+               ...GatsbyImageSharpFluid_withWebp_tracedSVG
+            }
+          }
+        }
       }
     }
   }
@@ -35,6 +42,7 @@ const Work = () => {
             name={node.name}
             description={node.description}
             link={node.link}
+            image={node.image.childImageSharp.fluid}
           />
         ))}
       </div>

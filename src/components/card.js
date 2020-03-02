@@ -1,6 +1,7 @@
 import React from "react"
+import Img from 'gatsby-image'
 
-const Card = ({ name, description, link }) => (
+const Card = ({ name, description, link, image }) => (
   <div className="max-w-sm rounded overflow-hidden shadow-lg bg-gray-800 mb-3 sm:mb-0">
     <div className="px-6 py-4">
       <div className="font-bold text-xl mb-2">{name}</div>
@@ -9,6 +10,7 @@ const Card = ({ name, description, link }) => (
         Visit {name}
       </a>
     </div>
+    <Img fluid={image} />
   </div>
 )
 
