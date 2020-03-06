@@ -18,7 +18,7 @@ const Index = () => {
       }
       car: file(relativePath: { eq: "leon.jpeg" }) {
         childImageSharp {
-          fluid {
+          fluid(quality: 100) {
             ...GatsbyImageSharpFluid_withWebp_tracedSVG
           }
         }
