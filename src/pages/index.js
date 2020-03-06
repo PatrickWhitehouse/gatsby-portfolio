@@ -16,8 +16,16 @@ const Index = () => {
           }
         }
       }
+      car: file(relativePath: { eq: "leon.jpeg" }) {
+        childImageSharp {
+          fluid {
+            ...GatsbyImageSharpFluid_withWebp_tracedSVG
+          }
+        }
+      }
     }
-  `)
+  `);
+  console.log(data);
   return (
     <Layout>
       <Helmet>
@@ -44,6 +52,18 @@ const Index = () => {
         <p className="mt-3">
           I'm always keeping up to date with the latest tech trends by following industry leaders on Twitter <a href="https://twitter.com/patrickdoesweb" target="_blank" rel="noopener noreferrer" className="text-green-500 hover:text-green-300 underline font-medium transition duration-500 ease-in-out">(here's my profile <span role="img" aria-label="wink face">😉</span>)</a>. I also scope the explore page on GitHub too, I often find some hidden gems here.
         </p>
+      </div>
+      <div className="mt-5">
+        <h3 className="text-3xl">Interests outside web development</h3>
+        <p className="mt-3">I'm a huge petrolhead, anything with an engine I'm interested in. I currently drive a Cupra 290 which delivers more than enough power for the (terrible) British roads. My dream car would be the ultimate family wagon, an Audi RS6, specifically the C7 variant.</p>
+        <p className="mt-3">Photography is another area that has my interest. I've usually always got my camera with me at any automotive event, taking snaps of unreal cars. I find sitting down at my Mac with Lightroom open theraputic, watching my RAW images come to life.</p>
+        <figure className="my-3">
+          <Img
+            fluid={data.car.childImageSharp.fluid}
+            alt="Seat Leon Cupra 290"
+          />
+          <figcaption>My Seat Leon Cupra 290</figcaption>
+        </figure>
       </div>
     </Layout>
   )
