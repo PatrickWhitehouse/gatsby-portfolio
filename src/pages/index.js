@@ -38,7 +38,7 @@ const Index = () => {
             I'm a Manchester based Front End Web Developer who specialises in constructing niche, pixel perfect websites.
           </h2>
         </div>
-        <div className="sm:w-1/2 order-1 sm:order-none mb-3 sm:mb-0" data-tilt data-tilt-glare data-tilt-max-glare="0.8">
+        <div className="sm:w-1/2 order-1 sm:order-none mb-3 sm:mb-0" data-tilt data-tilt-glare data-tilt-max-glare="0.5">
           <Img
             fluid={data.file.childImageSharp.fluid}
             alt="Patrick Whitehouse in front of lights"
