@@ -25,7 +25,7 @@ const Index = () => {
       }
     }
   `);
-  console.log(data);
+
   return (
     <Layout>
       <Helmet>
