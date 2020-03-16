@@ -6,7 +6,7 @@ export default function PageTemplate({ data: { mdx } }) {
   return (
     <>
       <Helmet>
-        <body className="font-sans bg-gray-900 text-white antialiased leading-relaxed text-lg" />
+        <body className="blog-post font-sans bg-gray-900 text-white antialiased leading-relaxed text-lg" />
         <title>{mdx.frontmatter.title} - Patrick Whitehouse</title>
       </Helmet>
       <main className="sm:max-w-screen-lg sm:m-auto p-5">
