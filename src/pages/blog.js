@@ -37,7 +37,11 @@ const Blog = () => {
           .filter(({ node }) => node.frontmatter.published === true)
           .map(({ node }) => {
             return (
-              <Link key={node.id} to={node.frontmatter.path} className="w-1/2">
+              <Link
+                key={node.id}
+                to={node.frontmatter.path}
+                className="lg:w-1/2"
+              >
                 <div
                   className={`w-full h-full my-5 text-${node.frontmatter.css}-400 border border-${node.frontmatter.css}-400 rounded p-4 flex flex-col justify-between leading-normal`}
                 >
