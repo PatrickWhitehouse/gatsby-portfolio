@@ -5,7 +5,7 @@ import { useStaticQuery, graphql, Link } from "gatsby"
 const Blog = () => {
   const blogCall = useStaticQuery(graphql`
     query blogCall {
-      allMdx {
+      allMdx(sort: { fields: frontmatter___date, order: DESC }) {
         edges {
           node {
             id
@@ -15,6 +15,7 @@ const Blog = () => {
               date
               description
               css
+              published
             }
           }
         }
@@ -31,20 +32,29 @@ const Blog = () => {
         Have a read of my latest blog posts about web development, cars and the
         odd ramble about general life stuff.
       </p>
-      {edges.map(({ node }, i) => (
-        <Link key={i} to={node.frontmatter.path}>
-          <div
-            className={`w-1/2 my-5 text-${node.frontmatter.css}-400 border border-${node.frontmatter.css}-400 rounded p-4 flex flex-col justify-between leading-normal`}
-          >
-            <div className="mb-8">
-              <div className="font-bold text-xl mb-2">
-                {node.frontmatter.title}
-              </div>
-              <p className="text-base">{node.frontmatter.description}</p>
-            </div>
-          </div>
-        </Link>
-      ))}
+      <div className="flex">
+        {edges
+          .filter(({ node }) => node.frontmatter.published === true)
+          .map(({ node }) => {
+            return (
+              <Link key={node.id} to={node.frontmatter.path} className="w-1/2">
+                <div
+                  className={`w-full h-full my-5 text-${node.frontmatter.css}-400 border border-${node.frontmatter.css}-400 rounded p-4 flex flex-col justify-between leading-normal`}
+                >
+                  <div className="mb-8">
+                    <div className="font-bold text-xl mb-2">
+                      {node.frontmatter.title}
+                    </div>
+                    <p className="text-base">{node.frontmatter.description}</p>
+                    <p className="text-base mt-5">
+                      Posted on {node.frontmatter.date}
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            )
+          })}
+      </div>
     </Layout>
   )
 }
