@@ -6,6 +6,9 @@ const Navigation = () => (
             <li className="mr-5">
                 <Link to="/" activeClassName="opacity-50 line-through">Home</Link>
             </li>
+            <li className="mr-5">
+                <Link to="/blog" activeClassName="opacity-50 line-through">Blog</Link>
+            </li>
             <li>
                 <Link to="/work" activeClassName="opacity-50 line-through">Work</Link>
             </li>
