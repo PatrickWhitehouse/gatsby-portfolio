@@ -16,3 +16,9 @@ h6 {
 .blog-post p {
   @apply my-5;
 }
+.blog-post main a {
+  @apply text-green-500 underline font-medium transition duration-500 ease-in-out;
+}
+.blog-post main a:hover {
+  @apply text-green-300;
+}

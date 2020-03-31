@@ -40,10 +40,10 @@ const Blog = () => {
               <Link
                 key={node.id}
                 to={node.frontmatter.path}
-                className="lg:w-1/2"
+                className="lg:w-1/2 p-4"
               >
                 <div
-                  className={`w-full h-full my-5 text-${node.frontmatter.css}-400 border border-${node.frontmatter.css}-400 rounded p-4 flex flex-col justify-between leading-normal`}
+                  className={`w-full h-full text-${node.frontmatter.css}-400 border border-${node.frontmatter.css}-400 rounded p-4 flex flex-col justify-between leading-normal`}
                 >
                   <div className="mb-8">
                     <div className="font-bold text-xl mb-2">
