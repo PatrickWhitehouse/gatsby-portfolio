@@ -32,7 +32,7 @@ const Blog = () => {
         Have a read of my latest blog posts about web development, cars and the
         odd ramble about general life stuff.
       </p>
-      <div className="flex">
+      <div className="lg:flex">
         {edges
           .filter(({ node }) => node.frontmatter.published === true)
           .map(({ node }) => {
@@ -40,7 +40,7 @@ const Blog = () => {
               <Link
                 key={node.id}
                 to={node.frontmatter.path}
-                className="lg:w-1/2 p-4"
+                className="w-full lg:w-1/2 p-4"
               >
                 <div
                   className={`w-full h-full text-${node.frontmatter.css}-400 border border-${node.frontmatter.css}-400 rounded p-4 flex flex-col justify-between leading-normal`}
