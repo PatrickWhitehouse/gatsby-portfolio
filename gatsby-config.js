@@ -45,8 +45,16 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
-    `gatsby-plugin-postcss`,
     `gatsby-plugin-scroll-reveal`,
+    `gatsby-plugin-postcss`,
+    {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        printRejected: true, // Print removed selectors and processed file names
+        // develop: true, // Enable while using `gatsby develop`
+        tailwind: true, // Enable tailwindcss support
+      }
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
