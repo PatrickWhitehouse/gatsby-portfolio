@@ -1,5 +1,4 @@
-[
-    {
+[{
         "id": 0,
         "name": "Maid About Town",
         "link": "https://maidabouttown.cleaning",
@@ -11,6 +10,13 @@
         "name": "AD Supplies",
         "link": "https://ad-supplies.com",
         "description": "AD Supplies is a relatively new business that has grown significantly without a website. David, one of the owners, wanted to continue the growth of the business and decided it would be best to have a website to point potential clients to. David also wanted a site which he could make amendments to and publish blog posts. I decided that WordPress was the solution for this and built a simple yet effective site, where SEO was one of the main focus points.",
+        "image": "./test.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Short & Sweet",
+        "link": "https://shortandsweet.design",
+        "description": "Beth, the owner of Short & Sweet came to me looking for a simple e-commerce store which would allow her to sell her custom prints with ease. We agreed to use WooCommerce due to its simplicity, meaning Beth can add and update exisiting products with ease.",
         "image": "./test.jpeg"
     }
 ]
