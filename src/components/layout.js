@@ -9,8 +9,12 @@ const Layout = ({ children, title }) => {
         <body className="font-sans bg-gray-900 text-white antialiased leading-relaxed text-lg" />
         <title>
           {title ? title + " |" : ""} Patrick Whitehouse | Freelance developer
-          based in Tameside, Manchester
+          based in Denton, Manchester
         </title>
+        <meta
+          name="description"
+          content="Patrick Whitehouse freelance web developer based in Denton, Manchester."
+        />
       </Helmet>
       <Navigation />
       <main className="sm:max-w-screen-lg sm:m-auto p-5">{children}</main>

@@ -1,6 +1,7 @@
 import React from "react"
 import Layout from "../components/layout"
 import { useStaticQuery, graphql, Link } from "gatsby"
+import { Helmet } from "react-helmet"
 
 const Blog = () => {
   const blogCall = useStaticQuery(graphql`
@@ -27,6 +28,12 @@ const Blog = () => {
   } = blogCall
   return (
     <Layout title="Blog">
+      <Helmet>
+        <meta
+          name="description"
+          content="Patrick Whitehouse's blog posts on the latest tech, web development trends and general life rambles."
+        />
+      </Helmet>
       <h1 className="text-4xl mb-3">Blog Posts</h1>
       <p>
         Have a read of my latest blog posts about web development, cars and the

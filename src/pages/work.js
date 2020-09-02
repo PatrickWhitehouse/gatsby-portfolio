@@ -2,6 +2,7 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Layout from "../components/layout"
 import Card from "../components/card"
+import { Helmet } from "react-helmet"
 
 const Work = () => {
   const queryCall = useStaticQuery(graphql`
@@ -29,6 +30,12 @@ const Work = () => {
 
   return (
     <Layout title="Work">
+      <Helmet>
+        <meta
+          name="description"
+          content="Patrick Whitehouse's case studies and recent work."
+        />
+      </Helmet>
       <h1 className="text-4xl mb-3">My Work</h1>
       <p>
         Have a look at my latest projects. I'm always on the lookout to expand
