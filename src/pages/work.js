@@ -35,7 +35,7 @@ const Work = () => {
         my portfolio, so give me a shout if you're interested in working with
         me.
       </p>
-      <div className="sm:flex sm:justify-between my-5">
+      <div className="sm:flex sm:flex-wrap sm:justify-between my-5">
         {queryData.map(({ node }) => (
           <Card
             key={node.id}
