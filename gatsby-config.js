@@ -46,19 +46,15 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-postcss`,
-<<<<<<< HEAD
     `gatsby-plugin-scroll-reveal`,
-    `gatsby-plugin-react-helmet`,
-=======
     {
       resolve: `gatsby-plugin-purgecss`,
       options: {
         printRejected: true, // Print removed selectors and processed file names
         // develop: true, // Enable while using `gatsby develop`
         tailwind: true, // Enable tailwindcss support
-      }
+      },
     },
->>>>>>> 273d92b77fac4a80b205256f4ec0d95db9ba7284
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
