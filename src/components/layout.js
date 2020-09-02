@@ -8,7 +8,7 @@ const Layout = ({ children, title }) => {
       <Helmet>
         <body className="font-sans bg-gray-900 text-white antialiased leading-relaxed text-lg" />
         <title>
-          {title ? title + " |" : ""} Patrick Whitehouse, freelance developer
+          {title ? title + " |" : ""} Patrick Whitehouse | Freelance developer
           based in Tameside, Manchester
         </title>
       </Helmet>
