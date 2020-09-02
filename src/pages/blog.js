@@ -26,7 +26,7 @@ const Blog = () => {
     allMdx: { edges },
   } = blogCall
   return (
-    <Layout>
+    <Layout title="Blog">
       <h1 className="text-4xl mb-3">Blog Posts</h1>
       <p>
         Have a read of my latest blog posts about web development, cars and the
