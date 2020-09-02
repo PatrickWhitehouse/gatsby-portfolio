@@ -7,7 +7,10 @@ export default function PageTemplate({ data: { mdx } }) {
     <>
       <Helmet>
         <body className="blog-post font-sans bg-gray-900 text-white antialiased leading-relaxed text-lg" />
-        <title>{mdx.frontmatter.title} - Patrick Whitehouse</title>
+        <title>
+          {mdx.frontmatter.title} | Patrick Whitehouse | Freelance developer
+          based in Denton, Manchester
+        </title>
       </Helmet>
       <main className="sm:max-w-screen-lg sm:m-auto p-5">
         <h1 className="text-4xl mb-3">{mdx.frontmatter.title}</h1>
